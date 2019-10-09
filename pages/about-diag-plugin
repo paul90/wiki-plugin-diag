@@ -1,0 +1,37 @@
+{
+  "title": "About Diag Plugin",
+  "story": [
+  {
+    "type": "paragraph",
+    "id": "7bcc0156a0cf5265",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "diag",
+    "id": "14917cf9c0d9f2dd",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+],
+  "journal": [
+  {
+    "type": "create",
+    "item": {
+      "title": "About Diag Plugin",
+      "story": [
+  {
+    "type": "paragraph",
+    "id": "7bcc0156a0cf5265",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "diag",
+    "id": "14917cf9c0d9f2dd",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+]
+    },
+    "date": 1570610906000,
+    "certificate": "from mkplugin.sh"
+  }
+]
+}
