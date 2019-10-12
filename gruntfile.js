@@ -1,21 +1,9 @@
 module.exports = function (grunt) {
-  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-git-authors');
 
   grunt.initConfig({
-    coffee: {
-      client: {
-        expand: true,
-        options: {
-          sourceMap: true
-        },
-        src: ['client/*.coffee', 'test/*.coffee', 'server/*.coffee'],
-        ext: '.js'
-      }
-    },
-
     mochaTest: {
       test: {
         options: {
@@ -28,13 +16,13 @@ module.exports = function (grunt) {
 
     watch: {
       all: {
-        files: ['client/*.coffee', 'test/*.coffee', 'server/*.coffee'],
-        tasks: ['coffee','mochaTest']
+        files: ['client/*.js', 'test/*.js', 'server/*.js'],
+        tasks: ['mochaTest']
       }
     }
   });
 
-  grunt.registerTask('build', ['coffee', 'mochaTest']);
+  grunt.registerTask('build', ['mochaTest']);
   grunt.registerTask('default', ['build']);
 
 };

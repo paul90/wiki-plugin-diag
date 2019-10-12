@@ -9,9 +9,9 @@
     "plugin"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com",
-    "url": "http://example.com"
+    "name": "Paul Rodwell",
+    "email": "paul.rodwell@btinternet.com",
+    "url": "http://rodwell.me"
   },
   "contributors": [],
   "scripts": {
@@ -20,7 +20,6 @@
   "devDependencies": {
     "expect.js": "^0.3.1",
     "grunt": "^1.0.1",
-    "grunt-contrib-coffee": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-git-authors": "^3.2.0",
     "grunt-mocha-test": "^0.13.2",
@@ -29,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fedwiki/wiki-plugin-diag.git"
+    "url": "https://github.com/paul90/wiki-plugin-diag.git"
   },
   "bugs": {
-    "url": "https://github.com/fedwiki/wiki-plugin-diag/issues"
+    "url": "https://github.com/paul90/wiki-plugin-diag/issues"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=10.0"
   }
 }
