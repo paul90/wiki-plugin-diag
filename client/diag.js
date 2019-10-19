@@ -9,7 +9,7 @@
         .replace(/\*(.+?)\*/g, '<i>$1</i>')
   }
 
-  consumes = ['.diag']
+  consumes = ['.diag-source']
 
   emit = ($item, item) => {
     var emitTime = performance.now()
@@ -29,7 +29,7 @@
     <tr><th>Bind Time</th><td>${bindTime}</td></tr>`)
     //
 
-    let toLeft = $(`.item:lt(${$('.item').index($item)})`).filter(".diag").last()
+    let toLeft = $(`.item:lt(${$('.item').index($item)})`).filter(".diag-source").last()
     console.log('toLeft', toLeft)
     let toLeftID = toLeft.data('id')
     if (typeof toLeftID !== "undefined") {
