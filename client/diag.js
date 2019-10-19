@@ -14,7 +14,7 @@
   emit = ($item, item) => {
     var emitTime = performance.now()
     $item[0].consuming = []
-    $item.addClass('output-item')
+    $item.addClass('diag-source')
     return  $item.append(`
     <table>
       <tr><th>ID</th><td>${item.id}</td></tr>
