@@ -15,6 +15,9 @@
     var emitTime = performance.now()
     $item[0].consuming = []
     $item.addClass('diag-source')
+    // some diagnostics...
+    console.log('diag emit ' + item.id + ' at ' + emitTime )
+    console.trace()
     return  $item.append(`
     <table>
       <tr><th>ID</th><td>${item.id}</td></tr>
@@ -27,10 +30,9 @@
     var bindTime = performance.now()
     $item.find('table').append(`
     <tr><th>Bind Time</th><td>${bindTime}</td></tr>`)
-    //
-
     let toLeft = $(`.item:lt(${$('.item').index($item)})`).filter(".diag-source").last()
-    console.log('toLeft', toLeft)
+    console.log('diag bind ' + item.id + ' at ' + bindTime )
+    console.trace()
     let toLeftID = toLeft.data('id')
     if (typeof toLeftID !== "undefined") {
       let onPageKey = $(toLeft).closest('.page').data('key')
