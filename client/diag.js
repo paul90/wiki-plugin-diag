@@ -9,28 +9,31 @@
         .replace(/\*(.+?)\*/g, '<i>$1</i>')
   }
 
-  consumes = ['.diag-source']
+  consumes = ['.diag']
 
   emit = ($item, item) => {
     var emitTime = performance.now()
     $item[0].consuming = []
-    $item.addClass('diag-source')
+    $item.addClass('output-item')
     // some diagnostics...
     console.log('diag emit ' + item.id + ' at ' + emitTime )
     console.trace()
-    return  $item.append(`
+    $item.append(`
     <table>
       <tr><th>ID</th><td>${item.id}</td></tr>
       <tr><th>Emit Time</th><td>${emitTime}</td></tr>
     </table>
     <hr>`)
+    $item.dblclick(() => {
+      return wiki.textEditor($item, item);
+    })
   }
 
   bind = ($item, item) => {
     var bindTime = performance.now()
     $item.find('table').append(`
     <tr><th>Bind Time</th><td>${bindTime}</td></tr>`)
-    let toLeft = $(`.item:lt(${$('.item').index($item)})`).filter(".diag-source").last()
+    let toLeft = $(`.item:lt(${$('.item').index($item)})`).filter('.diag').last()
     console.log('diag bind ' + item.id + ' at ' + bindTime )
     console.trace()
     let toLeftID = toLeft.data('id')
